@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";  // <-- importar Link
 import { cn } from "../lib/utils";
 
 const navItems = [
-  { name: "Inicio", href: "#hero" },
-  { name: "Sobre mí", href: "#about" },
-  { name: "Habilidades", href: "#skills" },
-    { name: "Servicios", href: "#services" },
-  { name: "Proyectos", href: "#projects" },
-  { name: "Contacto", href: "#contact" },
+  { name: "Inicio", to: "/" },
+  { name: "Sobre mí", to: "/about" },
+  { name: "Habilidades", to: "/skills" },
+  { name: "Servicios", to: "/services" },
+  { name: "Proyectos", to: "/projects" },
+  { name: "Contacto", to: "/contact" },
 ];
 
 export const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
@@ -34,14 +35,14 @@ export const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
       >
         <div className="flex flex-col space-y-8 text-xl">
           {navItems.map((item, key) => (
-            <a
+            <Link
               key={key}
-              href={item.href}
+              to={item.to}
               className="text-foreground/80 hover:text-primary transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -56,25 +57,25 @@ export const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
       >
         <div className="container flex items-center justify-between">
           {/* Logo */}
-          <a
+          <Link
             className="text-xl font-bold text-primary flex items-center"
-            href="#hero"
+            to="/"
           >
             <span className="relative z-10">
               <span className="text-glow text-foreground">Antonio</span> DevFolio
             </span>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item, key) => (
-              <a
+              <Link
                 key={key}
-                href={item.href}
+                to={item.to}
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
 
