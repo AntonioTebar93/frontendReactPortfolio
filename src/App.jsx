@@ -5,11 +5,11 @@ import { ProjectsPage } from "./pages/ProjectsPage";
 import { Contact } from "./pages/Contact";
 import { NotFound } from "./pages/NotFound";
 
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
         <Route path="about" element={<AboutMe />} />
@@ -18,7 +18,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
