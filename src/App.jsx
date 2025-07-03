@@ -1,7 +1,6 @@
 import { Home } from "./pages/Home";
 import { AboutMe } from "./pages/AboutMe";
 import { SkillsPage } from "./pages/SkillsPage";
-import { Services } from "./pages/Services";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { Contact } from "./pages/Contact";
 import { NotFound } from "./pages/NotFound";
