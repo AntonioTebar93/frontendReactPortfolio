@@ -29,7 +29,7 @@ export const HeroSection = () => {
           </p>
 
           <div className="flex justify-center gap-6 pt-4 opacity-0 animate-fade-in-delay-5">
-            <a href="#proyectos" className="cosmic-button">
+            <a href="#projects" className="cosmic-button">
               Mis proyectos
             </a>
             <a href="#proyectos" className="cosmic-button">
