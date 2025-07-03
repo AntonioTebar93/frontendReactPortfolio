@@ -1,22 +1,16 @@
-import { Home } from "./pages/Home"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { NotFound } from "./pages/NotFound";
 
 function App() {
-
-
   return (
-    <>
-      <BrowserRouter>
+    <HashRouter>
       <Routes>
-         <Route index element= {<Home />} />
-         <Route path="*" element={<NotFound />} />
-      
-
+        <Route index element={<Home />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      </BrowserRouter>
-    </>
+    </HashRouter>
   );
 }
 
-export default App
+export default App;
