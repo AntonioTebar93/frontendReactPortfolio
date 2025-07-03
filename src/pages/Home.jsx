@@ -30,10 +30,10 @@ export const Home = () => {
         href="https://wa.me/34658431719"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-[#39FF14] text-white p-2 rounded-full shadow-lg transition duration-300"
+        className="fixed bottom-6 right-6 z-50 bg-[#39FF14] text-white p-4 rounded-full shadow-lg transition duration-300"
         aria-label="Contactar por WhatsApp"
       >
-        <FaWhatsapp className="w-12 h-12" />
+        <FaWhatsapp className="w-10 h-10" />
       </a>
     </div>
   );
